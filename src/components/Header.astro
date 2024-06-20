@@ -1,15 +1,33 @@
 ---
 
 ---
-
-<header class="flex justify-evenly items-center mt-2">
-    <div class="flex">
-        <h2 class="font-semibold text-white mr-2">Zen Detects</h2>
+<header class="flex justify-evenly items-center p-2 fixed top-0 z-10 w-full rounded-full">
+    <div class="flex rounded-full p-1 pr-2 pl-2">
+        <a href="" class="font-semibold text-white mr-2">Zen Detects</a>
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zoom"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
     </div>
-    <nav class="flex justify-center items-center">
+    <nav class="flex justify-center items-center rounded-full p-1 pr-2 pl-2">
         <a href="" class="mr-4 hover:text-red-500 duration-300 font-semibold text-white">Inicio</a>
         <a href="" class="mr-4 hover:text-red-500 duration-300 font-semibold text-white">Servicios</a>
         <a href="" class="hover:text-red-500 duration-300 font-semibold text-white">Contacto</a>
     </nav>
 </header>
+
+<style>
+    header div {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+    nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+    }
+  }
+</style>
